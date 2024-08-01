@@ -1,0 +1,130 @@
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.yanone-kaffeesatz-bold {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: rgba(52, 85, 82, 0.9215686275);
+  width: 95%;
+  text-align: center;
+  margin: auto;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+* body {
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: contrast(0.972) blur(9px) saturate(0.9);
+          backdrop-filter: contrast(0.972) blur(9px) saturate(0.9);
+  background-image: url(../../public/header.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+* body .headerBg {
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+  border-color: rgba(208, 221, 233, 0.8);
+  background-color: rgba(203, 214, 218, 0.87);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  top: 20%;
+  padding: 2rem;
+  width: 100%;
+}
+* body .headerBg .headerTitle {
+  color: rgba(13, 72, 66, 0.7098039216);
+  font-size: 3rem;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 0 2rem;
+}
+
+.filterDiv {
+  width: 70%;
+}
+
+.btnGeneral {
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  color: #181F25;
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 2rem;
+  padding: 0.7rem 1rem;
+  width: auto;
+}
+
+.btnSurprise {
+  width: -moz-min-content;
+  width: min-content;
+  margin: 1rem auto;
+}
+
+.btnSpace {
+  margin: 0 0.5rem 0 0;
+}
+
+.intol {
+  margin: 0 0.4rem;
+}
+
+.applyFilter {
+  border: 2px solid rgb(77, 76, 76);
+  padding: 0.2rem 0.4rem;
+  border-radius: 16px;
+  position: relative;
+  margin: 1rem 2rem;
+}
+
+.funnelFilter {
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  left: -155%;
+  top: 100%;
+}
+
+.wrapButtons {
+  display: inline-flex;
+}
+
+.wrapMoreOpt {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.wrapMoreOpt .checkBoxStyle {
+  border: 1.5px solid #1e7693;
+  margin: 0 0.3rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  height: -moz-min-content;
+  height: min-content;
+  cursor: pointer;
+}
+.wrapMoreOpt .inputStyleMoreOpt {
+  margin: 0 0.2rem;
+}
+
+.applyFilter {
+  align-items: center;
+  border: 3px solid black;
+}/*# sourceMappingURL=main.css.map */

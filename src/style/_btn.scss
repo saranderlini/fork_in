@@ -1,0 +1,62 @@
+.btnGeneral {
+    align-items: center;
+    border-radius: 20px;
+    border: none;
+    color: #181F25;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 2rem;
+    padding: 0.7rem 1rem;
+    width: auto ;
+}
+
+.btnSurprise {
+    width: min-content;
+    margin: 1rem auto;
+}
+
+.btnSpace {
+    margin: 0 0.5rem 0 0;
+}
+
+.intol {
+    margin: 0 0.4rem;
+}
+
+.applyFilter {
+    border: 2px solid rgb(77, 76, 76);
+    padding: 0.2rem 0.4rem;
+    border-radius: 16px;
+    position: relative;
+    margin: 1rem 2rem;
+}
+
+.funnelFilter {
+    position: absolute;
+    width: max-content;
+    left: -155%;
+    top: 100%;
+}
+
+.wrapButtons {
+    display: inline-flex;
+}
+
+.wrapMoreOpt {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .checkBoxStyle {
+        border: 1.5px solid #1e7693;
+        margin: 0 0.3rem;
+        padding: 0.1rem 0.4rem;
+        border-radius: 4px;
+        height: min-content;
+        cursor: pointer;
+    }
+    .inputStyleMoreOpt {
+        margin: 0 0.2rem;
+    }
+}
