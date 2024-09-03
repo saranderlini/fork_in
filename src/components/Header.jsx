@@ -1,4 +1,3 @@
-// Header.jsx
 import { Routes, Route } from 'react-router-dom';
 import Filters from './Filters';
 import Homepage from './Homepage';
