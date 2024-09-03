@@ -5,8 +5,6 @@ import { LuWheatOff } from "react-icons/lu";
 import { CgDanger } from "react-icons/cg";
 import { RxTimer } from "react-icons/rx";
 import { RiRestaurant2Line } from "react-icons/ri";
-import LookUp from "./LookUp";
-import Random from "./Random";
 
 // Filters visible once the filter utility is clicked
 export const FilterList = [
@@ -61,7 +59,7 @@ export const FilterList = [
                     { intValue: "maincourse", intTitle: "Main Course" },
                     { intValue: "salad", intTitle: "Salad" },
                     { intValue: "snack", intTitle: "Snack" },
-                    { intValue: "desser", intTitle: "Dessert" },
+                    { intValue: "dessert", intTitle: "Dessert" },
                 ]
             },
             {
@@ -92,13 +90,11 @@ export const FilterList = [
         textHovered: "Search for words.",
         index: 1,
         utilityType: "string",
-        utility: <LookUp />
     },
     {
         img: <BsShuffle />,
         textHovered: "Take me by surprise!",
         index: 2,
         utilityType: "random",
-        utility: <Random />
     }
 ];
