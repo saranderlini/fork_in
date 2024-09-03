@@ -1,0 +1,92 @@
+.loadingTitle {
+    margin: auto;
+    text-align: center;
+    font-size: 2rem;
+    color: rgba(13, 72, 66, 0.7098039216);
+    padding-top: 2rem;
+}
+
+.resultContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.resultWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.resultTitle {
+    margin: auto;
+    font-size: 3rem;
+    color: rgba(13, 72, 66, 0.7098039216);
+}
+.resultCard {
+    background-color: white;
+    border: 2px solid rgb(17, 81, 59);
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    justify-content: center;
+}
+.resultCardBtn {
+    border: none;
+    background: none;
+    color: rgba(13, 72, 66, 0.7098039216);
+}
+
+.singleRecipeWrap {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    .singleRecipeTitle {
+        font-size: 1.5rem;
+        margin: 0.1rem auto;
+        color: rgba(13, 72, 66, 0.997);
+
+    }
+    .singleRecipeText {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 1rem;
+        background-color: rgba(208, 221, 233, 0.8);
+        border: 1px solid rgba(13, 72, 66, 0.997);
+    }
+    .singleRecipeMedia {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 1rem;
+        .singleRecipeSymbols {
+            color: rgb(16, 43, 33);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 1rem 5rem;
+        }
+        .singleRecipeImg {
+            width: 50%;
+            justify-content: center;
+            border-radius: 15px;
+            border: 3px solid rgb(6, 60, 42);
+            
+        }
+    }
+    .singleRecipeArrow {
+        border: none;
+        background: none;
+        color: rgb(6, 60, 42);
+        margin: auto;
+    }
+
+    .singleRecipeArrowHovered {
+        color: #5ecca6;
+    }
+    .singleRecipeArrowClicked {
+        color: rgb(56, 108, 97);
+    }
+}

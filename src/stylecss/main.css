@@ -11,6 +11,13 @@
   font-style: normal;
 }
 
+.yanone-kaffeesatz {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .subtitle {
   font-size: 2rem;
   color: rgba(52, 85, 82, 0.9215686275);
@@ -25,7 +32,7 @@
 }
 * body {
   width: 100vw;
-  height: 100vh;
+  height: 160vh;
   -webkit-backdrop-filter: contrast(0.972) blur(9px) saturate(0.9);
           backdrop-filter: contrast(0.972) blur(9px) saturate(0.9);
   background-image: url(../../public/header.png);
@@ -41,9 +48,13 @@
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   position: absolute;
-  top: 20%;
+  top: 10%;
   padding: 2rem;
   width: 100%;
+}
+* body .headerBg .headerWrapper {
+  display: flex;
+  flex-direction: column;
 }
 * body .headerBg .headerTitle {
   color: rgba(13, 72, 66, 0.7098039216);
@@ -52,56 +63,71 @@
   width: -moz-fit-content;
   width: fit-content;
   padding: 1rem 0 2rem;
+  text-align: center;
 }
-
-.filterDiv {
-  width: 70%;
+* body .headerBg .navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .btnGeneral {
   align-items: center;
+  background-color: rgba(133, 143, 151, 0.0941176471);
   border-radius: 20px;
-  border: none;
-  color: #181F25;
+  border: 2px solid #075410;
+  color: rgb(6, 60, 42);
   display: flex;
+  font-weight: 600;
   justify-content: center;
-  margin: 0.5rem 2rem;
-  padding: 0.7rem 1rem;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   width: auto;
 }
 
-.btnSurprise {
-  width: -moz-min-content;
-  width: min-content;
-  margin: 1rem auto;
+.btnGeneralHovered {
+  background-color: #bd7caa;
+  color: #d7d2d1;
+  border-color: #872a87;
+}
+
+.btnGeneralClicked {
+  background-color: #6ebfa9;
+  color: #090e3d;
+  border-color: #5ecca6;
 }
 
 .btnSpace {
   margin: 0 0.5rem 0 0;
 }
 
-.intol {
-  margin: 0 0.4rem;
+.btnFilters {
+  padding: 0.7rem 0.9rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #80a5b4;
+  color: #020733;
+  border: 2px solid #4c5182;
 }
 
-.applyFilter {
-  border: 2px solid rgb(77, 76, 76);
-  padding: 0.2rem 0.4rem;
-  border-radius: 16px;
-  position: relative;
-  margin: 1rem 2rem;
+.btnFilterHover {
+  background-color: #ae62c1;
+  color: #cecfd6;
+  border: 2px solid rgb(61, 100, 155);
 }
 
-.funnelFilter {
-  position: absolute;
-  width: -moz-max-content;
-  width: max-content;
-  left: -155%;
-  top: 100%;
+.btnFilterClicked {
+  background-color: #79c5b2;
+  color: #344138;
+  border: 2px solid rgb(55, 132, 109);
 }
 
 .wrapButtons {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 2rem;
 }
 
 .wrapMoreOpt {
@@ -113,7 +139,7 @@
 }
 .wrapMoreOpt .checkBoxStyle {
   border: 1.5px solid #1e7693;
-  margin: 0 0.3rem;
+  margin: 0.3rem 0.3rem;
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
   height: -moz-min-content;
@@ -124,7 +150,151 @@
   margin: 0 0.2rem;
 }
 
-.applyFilter {
+.textSearch {
+  margin: 2rem auto 1rem;
+  flex-direction: row;
   align-items: center;
-  border: 3px solid black;
+  justify-content: center;
+}
+.textSearch label {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #0c4457;
+}
+.textSearch input {
+  font-size: 1.3rem;
+  font-style: italic;
+  padding: 0.2rem 0.8rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.shuffleBtn {
+  border: none;
+  background: none;
+  display: flex;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  margin: 2rem auto 1rem;
+  color: rgba(13, 72, 66, 0.71);
+  justify-content: center;
+}
+
+.arrowBtn {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  margin: 2rem auto 0;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 15px;
+  color: #1a1362;
+  background-color: #77c6e0;
+}
+
+.arrowBtnHovered {
+  color: #77c6e0;
+  background-color: #52519e;
+}
+
+.arrowBtnClicked {
+  color: #0f5d4d;
+  background-color: #6faea4;
+}
+
+.loadingTitle {
+  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  color: rgba(13, 72, 66, 0.7098039216);
+  padding-top: 2rem;
+}
+
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.resultWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.resultTitle {
+  margin: auto;
+  font-size: 3rem;
+  color: rgba(13, 72, 66, 0.7098039216);
+}
+
+.resultCard {
+  background-color: white;
+  border: 2px solid rgb(17, 81, 59);
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 15px;
+  font-size: 1.4rem;
+  justify-content: center;
+}
+
+.resultCardBtn {
+  border: none;
+  background: none;
+  color: rgba(13, 72, 66, 0.7098039216);
+}
+
+.singleRecipeWrap {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.singleRecipeWrap .singleRecipeTitle {
+  font-size: 1.5rem;
+  margin: 0.1rem auto;
+  color: rgba(13, 72, 66, 0.997);
+}
+.singleRecipeWrap .singleRecipeText {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  padding: 1rem;
+  background-color: rgba(208, 221, 233, 0.8);
+  border: 1px solid rgba(13, 72, 66, 0.997);
+}
+.singleRecipeWrap .singleRecipeMedia {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.singleRecipeWrap .singleRecipeMedia .singleRecipeSymbols {
+  color: rgb(16, 43, 33);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 5rem;
+}
+.singleRecipeWrap .singleRecipeMedia .singleRecipeImg {
+  width: 50%;
+  justify-content: center;
+  border-radius: 15px;
+  border: 3px solid rgb(6, 60, 42);
+}
+.singleRecipeWrap .singleRecipeArrow {
+  border: none;
+  background: none;
+  color: rgb(6, 60, 42);
+  margin: auto;
+}
+.singleRecipeWrap .singleRecipeArrowHovered {
+  color: #5ecca6;
+}
+.singleRecipeWrap .singleRecipeArrowClicked {
+  color: rgb(56, 108, 97);
 }/*# sourceMappingURL=main.css.map */
